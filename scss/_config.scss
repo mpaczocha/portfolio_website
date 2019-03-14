@@ -18,7 +18,7 @@ $background-opacity: 0.6;
          background-size: cover;
 
          &:after {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             right: 0;
@@ -28,6 +28,17 @@ $background-opacity: 0.6;
             z-index: -1;
          }
       }
+   }
+}
+
+// Set text color
+@function set-text-color($color) {
+   @if (lightness($color) > 40) {
+      @return #000;
+   }
+
+   @else {
+      @return #fff;
    }
 }
 
